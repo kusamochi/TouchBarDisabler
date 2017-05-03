@@ -8,6 +8,8 @@ TouchBarDisabler allows users to manually turn off the Touch Bar on 2016 MacBook
 
 **[What should I do If I am unable to open TouchBarDisabler?](FAQ.md)**
 
+**[How would I be able to use/remap the Escape key?](https://github.com/HiKay/TouchBarDisabler/issues/1)**
+
 ## Features
 - Toggle between enabling and disabling Touch Bar
 - Remaps Brightness down to Ctrl+1, and Brightness Up to Ctrl+2.

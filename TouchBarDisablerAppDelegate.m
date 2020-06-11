@@ -327,23 +327,13 @@ void setVolume(AudioDeviceID device, Float32 volume) {
     AudioObjectPropertyAddress addressLeft = {
         kAudioDevicePropertyVolumeScalar,
         kAudioDevicePropertyScopeOutput,
-        1 /*LEFT_CHANNEL*/
+        0 /*MAIN_CHANNEL*/
     };
     
     OSStatus err;
     err = AudioObjectSetPropertyData(device, &addressLeft, 0, NULL, sizeof(volume), &newVolume);
     if (err) {
-        NSLog(@"something went wrong on the left side! %d", err);
-    }
-    
-    AudioObjectPropertyAddress addressRight = {
-        kAudioDevicePropertyVolumeScalar,
-        kAudioDevicePropertyScopeOutput,
-        2 /*RIGHT_CHANNEL*/
-    };
-    err = AudioObjectSetPropertyData(device, &addressRight, 0, NULL, sizeof(volume), &newVolume);
-    if (err) {
-        NSLog(@"something went wrong on the right side! %d", err);
+        NSLog(@"something went wrong on the channel! %d", err);
     }
 }
 
